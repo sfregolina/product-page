@@ -111,16 +111,22 @@ main {
 .product_img {
 	width:50%;
 }
+.product-img-container {
+	overflow:hidden;
+	width: 100%;
+	max-width: 480px;
+	margin: auto;
+}
 .product-img {
 	text-align:center;
 	padding-bottom:40px;
 }
 .product-img img {
 	width:100%;
-	max-width:480px;
 }
 .zoom img:hover {
 	cursor: url(images/zoom_in.png),auto;
+	transform:scale(1.5);
 }
 .product_specs {
 	width:50%;
@@ -205,8 +211,9 @@ main {
 .full {
 	padding:0 0 40px;
 }
-.product_img_large {
-	float:right;
+.product_img_large-container {
+	width: 100%;
+    overflow: hidden;
 }
 .product_img_large img {
 	width:100%;
