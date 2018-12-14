@@ -1,7 +1,8 @@
 * {
 	padding:0;
 	margin:0;
-	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	        box-sizing:border-box;
 }
 html, body {
 	padding:0;
@@ -32,6 +33,9 @@ p {
 	font-size: .9rem;
     line-height: 1.35rem;
 }
+::-moz-selection {
+  background: #ffefa0;
+}
 ::selection {
   background: #ffefa0;
 }
@@ -46,8 +50,13 @@ nav {
 	background-color: #ffffff;
 	border-bottom: 1px solid #000;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position:-webkit-sticky;
     position:sticky;
     top:0;
     z-index:2;
@@ -104,8 +113,11 @@ main {
 .product_row {
 	width:100%;
 	padding:0 30px;
-	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	        box-sizing:border-box;
 	overflow:hidden;
+	display:-webkit-box;
+	display:-ms-flexbox;
 	display:flex;
 }
 .product_img {
@@ -126,7 +138,9 @@ main {
 }
 .zoom img:hover {
 	cursor: url(images/zoom_in.png),auto;
-	transform:scale(1.5);
+	-webkit-transform:scale(1.5);
+	    -ms-transform:scale(1.5);
+	        transform:scale(1.5);
 }
 .product_specs {
 	width:50%;
@@ -235,8 +249,13 @@ footer {
 	border-top:1px solid #000;
 }
 .footer_inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 .footer_inner > div {
 	vertical-align: top;
@@ -267,8 +286,13 @@ footer div h3:after {
 	width:146px;
 }
 .footer_right_col {
+	display:-webkit-box;
+	display:-ms-flexbox;
 	display:flex;
-	flex-direction:column;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	    -ms-flex-direction:column;
+	        flex-direction:column;
 }
 .sign_up_form {
 	width: 373px;
@@ -327,8 +351,12 @@ input[type=text]:focus {
 		padding:2rem 0;
 	}
 	.footer_inner {
-	    flex-direction: column;
-	    flex-wrap: wrap;
+	    -webkit-box-orient: vertical;
+	    -webkit-box-direction: normal;
+	        -ms-flex-direction: column;
+	            flex-direction: column;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
 	}
 	.footer_inner > div {
 		text-align:center;
@@ -343,8 +371,12 @@ input[type=text]:focus {
 		margin:0;
 	}
 	.footer_right_col {
-    	align-items: center;
-    	order:-1;
+    	-webkit-box-align: center;
+    	    -ms-flex-align: center;
+    	        align-items: center;
+    	-webkit-box-ordinal-group:0;
+    	    -ms-flex-order:-1;
+    	        order:-1;
 	}
 	.sign_up_form {
 		width:100%;
@@ -367,8 +399,13 @@ input[type=text]:focus {
 
 @media (max-width:63em) {
 	.product_row {
-		flex-direction: column;
-		align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	}
 	.product_img {
 		width:100%;
