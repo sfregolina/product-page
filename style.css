@@ -152,8 +152,11 @@ main {
 .product-img-container {
   overflow: hidden;
   width: 100%;
-  max-width: 480px;
   margin: auto;
+}
+
+.product-img-center {
+  max-width: 480px;
 }
 
 .product-img {
