@@ -136,6 +136,14 @@ main {
   display: -ms-flexbox;
   display: flex;
 }
+.product_row .product_row-container {
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
 .product_img {
   width: 50%;
@@ -164,8 +172,9 @@ main {
 }
 
 .product_specs {
-  width: 50%;
+  width: 485px;
   padding: 0 5% 40px;
+  margin: auto;
 }
 .product_specs .product-text {
   width: 100%;
@@ -204,7 +213,7 @@ main {
   padding-bottom: 0;
 }
 .product_specs .product-text .product_shop .select-float .product-select {
-  min-width: 138px;
+  min-width: 101px;
   position: relative;
 }
 .product_specs .product-text .product_shop .select-float .product-select:after {
@@ -359,31 +368,6 @@ footer .footer_right_col .social ul li a {
 }
 
 /* ----- MEDIA QUERIES ------ */
-@media (max-width: 63em) {
-  .product_row {
-    -webkit-box-orient: vertical;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .product_img {
-    width: 100%;
-  }
-
-  .product_specs {
-    width: 100%;
-  }
-
-  footer {
-    padding: 2rem;
-  }
-  footer .footer_inner > div {
-    margin: 0 0 5%;
-  }
-}
 @media (max-width: 42em) {
   h1 {
     font-size: 1.8rem;
@@ -459,6 +443,43 @@ footer .footer_right_col .social ul li a {
   }
   footer .footer_inner .footer_right_col .social h3 {
     display: none;
+  }
+}
+@media (max-width: 63em) {
+  .product_row {
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .product_row .product_row-container {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .product_img {
+    width: 100%;
+  }
+
+  .product_specs {
+    width: 100%;
+    padding: 0 0 40px;
+  }
+
+  footer {
+    padding: 2rem;
+  }
+  footer .footer_inner > div {
+    margin: 0 0 5%;
+  }
+}
+@media (max-width: 90em) and (min-width: 61.3125em) {
+  .product_row-container {
+    width: 100%;
   }
 }
 
