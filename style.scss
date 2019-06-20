@@ -67,10 +67,9 @@ header {
 }
 
 nav {
-	padding:1rem 2rem;
+	padding:0 2rem;
 	background-color: #ffffff;
 	border-bottom: 1px solid #000;
-    overflow: hidden;
     @include display-flex();
     @include flex-align-center ();
     position:-webkit-sticky;
@@ -81,6 +80,7 @@ nav {
     li {
 		display:inline-block;
 		list-style:none;
+		padding: 1rem 0;
 
 		a {
 			margin:0 1.2rem;
@@ -95,7 +95,44 @@ nav {
 }
 .top_left_nav {
 	width:70%;
+
+	.submenu {
+		display: none;
+		position: absolute;
+		width: 100%;
+		height: 300px;
+		top: 56px;
+		left: 0px;
+		background-color: #fff;
+		padding: 1rem 1rem 2rem 2rem;
+
+		&_col {
+			min-width: 153px;
+			padding-right: 10px;
+
+			&_title {
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size:1rem;
+				line-height: 2rem;
+			}
+			
+			li {
+				display: block;
+				padding: 0;
+
+				a {
+					font-size: .9rem;
+					line-height: 1.3rem;
+				}
+			}
+		}
 	}
+	&_item:hover .submenu {
+		display:flex;
+	}
+	
+}
 .top_user_nav {
 	text-align:right;
 	width:30%;
@@ -138,7 +175,7 @@ main {
 	overflow:hidden;
 	@include display-flex();
 
-	.product_row-container {
+	&-container {
 		width: 100%;
 		max-width: 1250px;
 		margin: auto;
@@ -149,22 +186,25 @@ main {
 }
 .product_img {
 	width:50%;
-}
-.product-img-container {
-	overflow:hidden;
-	width: 100%;
-	margin: auto;
-}
 
-.product-img-center {
-	max-width: 480px;
-}
-.product-img {
-	text-align:center;
-	padding-bottom:40px;
+	.product-img-container {
+		overflow:hidden;
+		width: 100%;
+		max-width: 480px;
+		margin: auto;
+	}
 
-	img {
-		width:100%;
+	.product-img-center {
+		max-width: 480px;
+	}
+
+	.product-img {
+		text-align:center;
+		padding-bottom:40px;
+	
+		img {
+			width:100%;
+		}
 	}
 }
 .zoom img:hover {
@@ -269,10 +309,11 @@ main {
 
 	.product_img_large-container {
 		width: 100%;
-	    overflow: hidden;
-	}
-	.product_img_large img {
-		width:100%;
+		overflow: hidden;
+		
+		img {
+			width:100%;
+		}
 	}
 }
 .description {
@@ -349,7 +390,7 @@ footer {
 				}
 			}
 
-		    .sign_up_form_btn {
+		    &_btn {
 				width:94px;
 				display:inline-block;
 				padding: 12px;
@@ -493,12 +534,5 @@ footer {
 	}
 	 
 }
-
-@media (max-width: 90em) and (min-width: 61.3125em) {
-	.product_row-container {
-		width: 100%;
-	}
-}
-
 
 
