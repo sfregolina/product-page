@@ -57,10 +57,9 @@ header .header-logo {
 }
 
 nav {
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   background-color: #ffffff;
   border-bottom: 1px solid #000;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,6 +74,7 @@ nav {
 nav li {
   display: inline-block;
   list-style: none;
+  padding: 1rem 0;
 }
 nav li a {
   margin: 0 1.2rem;
@@ -88,6 +88,37 @@ nav li a:hover {
 
 .top_left_nav {
   width: 70%;
+}
+.top_left_nav .submenu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  top: 56px;
+  left: 0px;
+  background-color: #fff;
+  padding: 1rem 1rem 2rem 2rem;
+}
+.top_left_nav .submenu_col {
+  min-width: 153px;
+  padding-right: 10px;
+}
+.top_left_nav .submenu_col_title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.top_left_nav .submenu_col li {
+  display: block;
+  padding: 0;
+}
+.top_left_nav .submenu_col li a {
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+.top_left_nav_item:hover .submenu {
+  display: flex;
 }
 
 .top_user_nav {
@@ -136,7 +167,7 @@ main {
   display: -ms-flexbox;
   display: flex;
 }
-.product_row .product_row-container {
+.product_row-container {
   width: 100%;
   max-width: 1250px;
   margin: auto;
@@ -148,22 +179,20 @@ main {
 .product_img {
   width: 50%;
 }
-
-.product-img-container {
+.product_img .product-img-container {
   overflow: hidden;
   width: 100%;
+  max-width: 480px;
   margin: auto;
 }
-
-.product-img-center {
+.product_img .product-img-center {
   max-width: 480px;
 }
-
-.product-img {
+.product_img .product-img {
   text-align: center;
   padding-bottom: 40px;
 }
-.product-img img {
+.product_img .product-img img {
   width: 100%;
 }
 
@@ -264,7 +293,7 @@ main {
   width: 100%;
   overflow: hidden;
 }
-.full .product_img_large img {
+.full .product_img_large-container img {
   width: 100%;
 }
 
@@ -342,7 +371,7 @@ footer .footer_right_col .sign_up_form input[type=text] {
 footer .footer_right_col .sign_up_form input[type=text]:focus {
   outline-style: none;
 }
-footer .footer_right_col .sign_up_form .sign_up_form_btn {
+footer .footer_right_col .sign_up_form_btn {
   width: 94px;
   display: inline-block;
   padding: 12px;
@@ -356,7 +385,7 @@ footer .footer_right_col .sign_up_form .sign_up_form_btn {
   cursor: pointer;
   outline: none;
 }
-footer .footer_right_col .sign_up_form .sign_up_form_btn:active {
+footer .footer_right_col .sign_up_form_btn:active {
   color: #000;
 }
 footer .footer_right_col .social {
@@ -478,11 +507,6 @@ footer .footer_right_col .social ul li a {
   }
   footer .footer_inner > div {
     margin: 0 0 5%;
-  }
-}
-@media (max-width: 90em) and (min-width: 61.3125em) {
-  .product_row-container {
-    width: 100%;
   }
 }
 
