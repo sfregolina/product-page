@@ -1,4 +1,4 @@
-@import "sass/mixins", "sass/navigation", "sass/footer";
+@import "mixins", "navigation", "footer";
 
 * {
   padding: 0;
@@ -159,7 +159,7 @@ main {
 }
 
 .zoom img:hover {
-  cursor: url(images/zoom_in.png),auto;
+  cursor: url("../images/zoom_in.png"),auto;
   -webkit-transform: scale(1.5);
   -ms-transform: scale(1.5);
   transform: scale(1.5);
