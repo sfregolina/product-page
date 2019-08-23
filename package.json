@@ -1,0 +1,26 @@
+{
+  "name": "product-page",
+  "version": "1.0.0",
+  "description": "<p><a href=\"https://rawcdn.githack.com/sfregolina/product-page/37e92740c801b81febe8143beb559bf738f7c232/index.html\" target=\"_blank\">DEMO</a></p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://sfregolina@github.com/sfregolina/product-page.git"
+  },
+  "author": "Federica",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sfregolina/product-page/issues"
+  },
+  "homepage": "https://github.com/sfregolina/product-page#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "stylelint": "^10.1.0",
+    "stylelint-config-airbnb": "0.0.0",
+    "stylelint-order": "^3.0.1",
+    "stylelint-scss": "^3.9.3"
+  }
+}
