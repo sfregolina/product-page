@@ -2,7 +2,7 @@
 
 This is a personal project that showcases an imaginary product page. The page is fully responsive and includes:
 - Meganav
-- Reposnsive images
+- Responsive images
 - Dropdown selectors
 - Zoom in animation
 - Footer
