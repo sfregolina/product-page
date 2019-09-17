@@ -7,7 +7,7 @@ This is a personal project that showcases an imaginary product page. The page is
 - Zoom in animation
 - Footer
 
-The aim of this project is practising with responsive design, flex box, sass, javascript, git and webpack.
+The aim of this project is practising with responsive design, flexbox, sass, javascript, git and webpack.
 
  ## Commands
 
