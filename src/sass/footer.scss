@@ -1,6 +1,6 @@
 @import "mixins";
 
-footer {
+.footer {
   padding: 2rem;
   border-top: 1px solid #000;
 
@@ -12,7 +12,7 @@ footer {
     padding: 2rem;
   }
 
-  .footer_inner {
+  &__inner {
     @include display-flex();
 
     @media (max-width:42em) {
@@ -21,23 +21,23 @@ footer {
 		
       @include flex-direction-column ();
     }
+  }
 
-    & > div {
-      vertical-align: top;
-      margin: 0 5%;
+  &__col {
+    vertical-align: top;
+    margin: 0 5%;
 
-      @media (max-width:42em) {
-        text-align: center;
-        margin: 0 0 5%;
-      }
+    @media (max-width:42em) {
+      text-align: center;
+      margin: 0 0 5%;
+    }
 
-      @media (max-width:63em) {
-        margin: 0 0 5%;
-      }
+    @media (max-width:63em) {
+      margin: 0 0 5%;
     }
   }
 
-  ul li {
+  &__list-item {
     list-style: none;
     padding-bottom: 10px;
 
@@ -57,7 +57,7 @@ footer {
     }
   }
 
-  div h3:after {
+  &__header:after {
     content: "";
     width: 58px;
     clear: left;
@@ -70,7 +70,7 @@ footer {
     }
   }
 
-  .footer-col-small {
+  &__col-small {
     width: 146px;
 
     @media (max-width:42em) {
@@ -78,7 +78,7 @@ footer {
     }
   }
 
-  .footer_right_col {
+  &__right-col {
     @include display-flex();
   
     @include flex-direction-column ();
@@ -91,7 +91,7 @@ footer {
       @include flex-align-center ();
     }
 
-    .sign_up_form {
+    .signup-form {
       width: 373px;
       margin-bottom: 40px;
     
@@ -99,7 +99,7 @@ footer {
         width: 100%;
       }
 
-      input[type=text] {
+      &__input[type=text] {
         width: 270px;
         min-width: 180px;
         padding: 15px;
@@ -116,7 +116,7 @@ footer {
         }
       }
 
-      &_btn {
+      &__btn {
         width: 94px;
         display: inline-block;
         padding: 12px;
@@ -147,7 +147,7 @@ footer {
         width: 100%;
       }
 
-      ul li {
+      &__list-item {
         display: inline-block;
       }
     

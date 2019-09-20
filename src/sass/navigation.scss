@@ -1,6 +1,6 @@
 @import "mixins";
 
-nav {
+.nav {
   padding: 0 2rem;
   background-color: #ffffff;
   border-bottom: 1px solid #000;
@@ -31,7 +31,7 @@ nav {
   }	
 }
 
-.top_left_nav {
+.nav__top-left {
   width: 70%;
 
   @media (max-width:42em) {
@@ -48,18 +48,19 @@ nav {
     background-color: #fff;
     padding: 1rem 1rem 2rem 2rem;
 
-    &_col {
+    &__col {
       min-width: 153px;
       padding-right: 10px;
 
-      &_title {
+      &-title {
         text-transform: uppercase;
         font-weight: 700;
         font-size: 1rem;
         line-height: 2rem;
+        padding: 0;
       }
       
-      li {
+      &-item {
         display: block;
         padding: 0;
 
@@ -71,12 +72,12 @@ nav {
     }
   }
 
-  &_item:hover .submenu {
+  .nav__list-item:hover .submenu {
     display: flex;
   }
 }
 
-.top_user_nav {
+.nav__top-user {
   text-align: right;
   width: 30%;
 
@@ -84,14 +85,14 @@ nav {
     width: 80%;
   }
 
-  li a {
+  .top-user__list-item a {
     margin: 0;
     margin-left: 30px;
     font-size: 1rem;
   }
 }
 
-.mobile_nav_button {
+.nav__mobile-button {
   font-size: 1.3rem;
   display: none;
   width: 20%;
