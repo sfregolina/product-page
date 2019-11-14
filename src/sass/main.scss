@@ -71,7 +71,7 @@ main {
 }
   
 .zoom img:hover {
-  cursor: url("../images/zoom_in.png"),auto;
+  cursor: zoom-in;
   -webkit-transform: scale(1.5);
   -ms-transform: scale(1.5);
   transform: scale(1.5);
