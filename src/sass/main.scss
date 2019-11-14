@@ -9,14 +9,14 @@ main {
   padding: 0 30px;
   overflow: hidden;
   
-  @include border-box ();
+  @include border-box;
   
-  @include display-flex();
+  @include display-flex;
   
   @media (max-width:63em) {
-    @include flex-direction-column ();
+    @include flex-direction-column;
   
-    @include flex-align-center ();
+    @include flex-align-center;
   }
   
   &__container {
@@ -30,7 +30,7 @@ main {
     @media (max-width:63em) {
       width: 100%;
     
-      @include flex-direction-column ();
+      @include flex-direction-column;
     }
   }
 }
@@ -45,7 +45,7 @@ main {
   @media (max-width:63em) {
     width: 100%;
   
-    @include flex-direction-column ();
+    @include flex-direction-column;
   }
   
   &__wrap {
