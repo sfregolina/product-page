@@ -6,7 +6,7 @@ main {
   
 .product-row {
   width: $fullWidthComponent;
-  padding: 0 30px;
+  padding: 0 30px 40px;
   overflow: hidden;
   
   @include border-box;
@@ -49,7 +49,6 @@ main {
   
   &__wrap {
     width: $fullWidthComponent;
-    padding-bottom: 40px;
 
     @include text-align-center;
   
@@ -82,13 +81,15 @@ main {
   padding: 0 5% 40px;
   margin: auto;
   
-  @media (max-width: $breakpointTablet) {
-    width: $fullWidthComponent;
-  }
-  
   @media (max-width: $breakpointDesktop) {
     width: $fullWidthComponent;
-    padding: 0 0 40px;
+    padding: 40px 0 0;
+  }
+
+  &:nth-child(1) {
+    @media (max-width: $breakpointDesktop) {
+      padding: 0 0 40px;
+    }
   }
   
   &__text {
@@ -140,7 +141,7 @@ main {
       }
   
       .product-select {
-        min-width: 101px;
+        min-width: 116px;
         position: relative;
   
         &:after {
