@@ -5,7 +5,7 @@ main {
 }
   
 .product-row {
-  width: 100%;
+  width: $fullWidthComponent;
   padding: 0 30px;
   overflow: hidden;
   
@@ -13,21 +13,21 @@ main {
   
   @include display-flex;
   
-  @media (max-width:63em) {
+  @media (max-width: $breakpointDesktop) {
     @include flex-direction-column;
   
     @include flex-align-center;
   }
   
   &__container {
-    width: 100%;
+    width: $fullWidthComponent;
     max-width: 1250px;
     margin: auto;
     
     @include display-flex;
   
-    @media (max-width:63em) {
-      width: 100%;
+    @media (max-width: $breakpointDesktop) {
+      width: $fullWidthComponent;
     
       @include flex-direction-column;
     }
@@ -35,32 +35,32 @@ main {
 }
   
 .product-img {
-  width: 50%;
+  width: $fullWidthComponent * .5;
   
-  @media (max-width:42em) {
-    width: 100%;
+  @media (max-width: $breakpointTablet) {
+    width: $fullWidthComponent;
   }
   
-  @media (max-width:63em) {
-    width: 100%;
+  @media (max-width: $breakpointDesktop) {
+    width: $fullWidthComponent;
   
     @include flex-direction-column;
   }
   
   &__wrap {
-    width: 100%;
+    width: $fullWidthComponent;
     padding-bottom: 40px;
 
     @include text-align-center;
   
     img {
-      width: 100%;
+      width: $fullWidthComponent;
     }
   }
   
   .img-container {
     overflow: hidden;
-    width: 100%;
+    width: $fullWidthComponent;
     max-width: 480px;
     margin: auto;
   }
@@ -82,22 +82,22 @@ main {
   padding: 0 5% 40px;
   margin: auto;
   
-  @media (max-width:42em) {
-    width: 100%;
+  @media (max-width: $breakpointTablet) {
+    width: $fullWidthComponent;
   }
   
-  @media (max-width:63em) {
-    width: 100%;
+  @media (max-width: $breakpointDesktop) {
+    width: $fullWidthComponent;
     padding: 0 0 40px;
   }
   
   &__text {
-    width: 100%;
+    width: $fullWidthComponent;
     max-width: 480px;
     margin: auto;
     
     .product-brand {
-      font-weight: 700;
+      font-weight: $fontBold;
       font-size: 2.3rem;
       padding-bottom: .3em;
   
@@ -113,7 +113,7 @@ main {
     }
   
     .product-price {
-      font-weight: 700;
+      font-weight: $fontBold;
       font-size: 1.2rem;
     }
   
@@ -123,7 +123,7 @@ main {
 
       @include display-flex;
 
-      @media (max-width:42em) {
+      @media (max-width: $breakpointTablet) {
         @include flex-direction-column;
       }
   
@@ -157,14 +157,10 @@ main {
           border-top: solid 5px #656565;
         }
       }
-  
-      .spacer {
-        clear: both;
-      }
     }
 
     .add-to-bag {
-      width: 100%;
+      width: $fullWidthComponent;
       max-width: 207px;
       margin-top: 20px;
     }
@@ -172,7 +168,7 @@ main {
     .add-to-bag__button {
       background-color: $backgroungColorBlack;
       border: 0;
-      width: 100%;
+      width: $fullWidthComponent;
       color: $fontColorWhite;
       padding: 15px 32px;
       text-decoration: none;
@@ -191,14 +187,16 @@ main {
 }
   
 .full {
+  max-width: 1920px;
   padding: 0 0 40px;
+  margin: auto;
   
   .product-img-large__container {
-    width: 100%;
+    width: $fullWidthComponent;
     overflow: hidden;
   
     img {
-      width: 100%;
+      width: $fullWidthComponent;
     }
   }
 }
@@ -206,7 +204,7 @@ main {
 .description {
   
   &__title {
-    font-weight: 700;
+    font-weight: $fontBold;
   }
   
   &__list-item {
@@ -217,7 +215,7 @@ main {
 }
   
 .center {
-  width: 100%;
+  width: $fullWidthComponent;
   
   @include text-align-center;
 }

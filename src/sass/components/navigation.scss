@@ -32,7 +32,7 @@
 }
 
 .nav__top-left {
-  width: 70%;
+  width: $fullWidthComponent * .7;
 
   @media (max-width:42em) {
     display: none;
@@ -41,7 +41,7 @@
   .submenu {
     display: none;
     position: absolute;
-    width: 100%;
+    width: $fullWidthComponent;
     height: 300px;
     top: 56px;
     left: 0px;
@@ -54,7 +54,7 @@
 
       &-title {
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: $fontBold;
         font-size: 1rem;
         line-height: 2rem;
         padding: 0;
@@ -79,10 +79,10 @@
 
 .nav__top-user {
   text-align: right;
-  width: 30%;
+  width: $fullWidthComponent * .3;
 
-  @media (max-width:42em) {
-    width: 80%;
+  @media (max-width: $breakpointTablet) {
+    width: $fullWidthComponent * .8;
   }
 
   .top-user__list-item a {
@@ -95,7 +95,7 @@
 .nav__mobile-button {
   font-size: 1.3rem;
   display: none;
-  width: 20%;
+  width: $fullWidthComponent * .2;
 
   @media (max-width:42em) {
     display: block;
