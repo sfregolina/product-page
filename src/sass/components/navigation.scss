@@ -1,17 +1,17 @@
-@import "../common/mixins";
+@import "../common/mixins", "../common/constants";
 
 .nav {
   padding: 0 2rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #000;
+  background-color: $backgroundColorWhite;
+  border-bottom: $borderWidth #000;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 2;
 
-  @include display-flex();
+  @include display-flex;
 
-  @include flex-align-center ();
+  @include flex-align-center;
 
   li {
     display: inline-block;
@@ -21,7 +21,7 @@
     a {
       margin: 0 1.2rem;
       margin-left: 0;
-      font-family: "Roboto", sans-serif;
+      font-family: $fontRoboto;
       font-size: 1.2rem;
 
       &:hover {
@@ -45,7 +45,7 @@
     height: 300px;
     top: 56px;
     left: 0px;
-    background-color: #fff;
+    background-color: $backgroundColorWhite;
     padding: 1rem 1rem 2rem 2rem;
 
     &__col {
@@ -73,7 +73,7 @@
   }
 
   .nav__list-item:hover .submenu {
-    display: flex;
+    @include display-flex;
   }
 }
 

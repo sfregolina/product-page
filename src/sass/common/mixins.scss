@@ -1,4 +1,4 @@
-@mixin display-flex() {
+@mixin display-flex () {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,7 +16,16 @@
   flex-direction: column;
 }
 
+@mixin flex-wrap () {
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+
 @mixin border-box () {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+@mixin text-align-center () {
+  text-align: center;
 }

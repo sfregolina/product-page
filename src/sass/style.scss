@@ -1,10 +1,10 @@
-@import "common/mixins", "components/navigation", "components/main", "components/footer";
+@import "common/mixins", "common/constants", "components/navigation", "components/main", "components/footer";
 
 * {
   padding: 0;
   margin: 0;
 
-  @include border-box ();
+  @include border-box;
 }
 
 html,
@@ -14,16 +14,16 @@ body {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: $fontRoboto;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: $fontColorBlack;
 }
 
 h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: $fontMontserrat;
   font-size: 2.6rem;
   padding: .8rem 2rem;
 
@@ -57,10 +57,10 @@ p {
 }
 
 header {
-  border-bottom: 1px solid #000;
+  border-bottom: $borderWidth #000;
 
   .header__logo {
-    text-align: center;
+    @include text-align-center;
   }
 }
 
@@ -74,7 +74,7 @@ select {
   z-index: 20;
   -webkit-appearance: none;
   outline: none;
-  font-family: "Roboto", sans-serif;
+  font-family: $fontRoboto;
   cursor: pointer;
 
   &:focus {

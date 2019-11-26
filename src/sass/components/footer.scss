@@ -1,8 +1,8 @@
-@import "../common/mixins";
+@import "../common/mixins", "../common/constants";
 
 .footer {
   padding: 2rem;
-  border-top: 1px solid #000;
+  border-top: $borderWidth #000;
 
   @media (max-width:42em) {
     padding: 2rem 0;
@@ -13,13 +13,12 @@
   }
 
   &__inner {
-    @include display-flex();
+    @include display-flex;
 
     @media (max-width:42em) {
-      flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
+      @include flex-wrap;
 		
-      @include flex-direction-column ();
+      @include flex-direction-column;
     }
   }
 
@@ -44,7 +43,7 @@
     a {
       margin: 0 1.2rem;
       margin-left: 0;
-      font-family: "Roboto", sans-serif;
+      font-family: $fontRoboto;
       font-size: .9rem;
 
       @media (max-width:42em) {
@@ -62,7 +61,7 @@
     width: 58px;
     clear: left;
     display: block;
-    border-top: 1px solid #000;
+    border-top: $borderWidth #000;
     margin: 7px 0;
   
     @media (max-width:42em) {
@@ -79,16 +78,16 @@
   }
 
   &__right-col {
-    @include display-flex();
+    @include display-flex;
   
-    @include flex-direction-column ();
+    @include flex-direction-column;
 
     @media (max-width:42em) {
       -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
       order: -1;
 
-      @include flex-align-center ();
+      @include flex-align-center;
     }
 
     .signup-form {
@@ -120,22 +119,23 @@
         width: 94px;
         display: inline-block;
         padding: 12px;
-        background-color: #000;
+        background-color: $backgroungColorBlack;
         border: 0;
-        color: #fff;
-        text-align: center;
+        color: $fontColorWhite;
         text-decoration: none;
         font-size: .9rem;
         margin: 4px 2px;
         cursor: pointer;
         outline: none;
+
+        @include text-align-center;
     
         @media (max-width:42em) {
           width: 79px;
         }
 
         &:active {
-          color: #000;
+          color: $fontColorBlack;
         }
       }
     }

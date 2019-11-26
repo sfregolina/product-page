@@ -1,4 +1,4 @@
-@import "../common/mixins";
+@import "../common/mixins","../common/constants";
 
 main {
   margin-top: 40px;
@@ -23,9 +23,8 @@ main {
     width: 100%;
     max-width: 1250px;
     margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    
+    @include display-flex;
   
     @media (max-width:63em) {
       width: 100%;
@@ -50,8 +49,9 @@ main {
   
   &__wrap {
     width: 100%;
-    text-align: center;
     padding-bottom: 40px;
+
+    @include text-align-center;
   
     img {
       width: 100%;
@@ -120,14 +120,15 @@ main {
     .product-shop {
       position: relative;
       padding-top: 15px;
+
+      @include display-flex;
+
+      @media (max-width:42em) {
+        @include flex-direction-column;
+      }
   
-      .select-float {
-        float: left;
+      .selector {
         margin-right: 11px;
-  
-        @media (max-width:42em) {
-          float: none;
-        }
   
         .title-select {
           margin: 15px 0;
@@ -160,29 +161,30 @@ main {
       .spacer {
         clear: both;
       }
-  
-      .add-to-bag {
-        width: 100%;
-        max-width: 207px;
-        margin-top: 20px;
-      }
-  
-      .add-to-bag__button {
-        background-color: #000;
-        border: 0;
-        width: 100%;
-        color: #fff;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        font-size: .9rem;
-        margin: 4px 2px;
-        cursor: pointer;
-        outline: none; 
-  
-        &:active {
-          color: #000;
-        }
+    }
+
+    .add-to-bag {
+      width: 100%;
+      max-width: 207px;
+      margin-top: 20px;
+    }
+
+    .add-to-bag__button {
+      background-color: $backgroungColorBlack;
+      border: 0;
+      width: 100%;
+      color: $fontColorWhite;
+      padding: 15px 32px;
+      text-decoration: none;
+      font-size: .9rem;
+      margin: 4px 2px;
+      cursor: pointer;
+      outline: none; 
+
+      @include text-align-center;
+
+      &:active {
+        color: $fontColorBlack;
       }
     }
   }
@@ -216,5 +218,6 @@ main {
   
 .center {
   width: 100%;
-  text-align: center;
+  
+  @include text-align-center;
 }
