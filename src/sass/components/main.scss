@@ -54,6 +54,7 @@ main {
   
     img {
       width: $fullWidthComponent;
+      transition: transform .4s linear;
     }
   }
   
@@ -198,6 +199,7 @@ main {
   
     img {
       width: $fullWidthComponent;
+      transition: transform .4s linear;
     }
   }
 }
