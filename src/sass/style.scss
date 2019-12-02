@@ -65,7 +65,7 @@ p {
 }
 
 header {
-  border-bottom: $borderWidth #000;
+  border-bottom: 1px solid #000;
 
   .header__logo {
     @include text-align-center;
