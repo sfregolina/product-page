@@ -1,4 +1,12 @@
-@import "common/mixins", "common/constants", "components/navigation", "components/main", "components/footer";
+@import "common/mixins";
+
+@import "common/constants";
+
+@import "components/navigation";
+
+@import "components/main";
+
+@import "components/footer";
 
 * {
   padding: 0;

@@ -1,31 +1,31 @@
-@mixin display-flex () {
+@mixin display-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-@mixin flex-align-center () {
+@mixin flex-align-center {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-@mixin flex-direction-column () {
+@mixin flex-direction-column {
   -webkit-box-orient: vertical;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
-@mixin flex-wrap () {
+@mixin flex-wrap {
   flex-wrap: wrap;
   -ms-flex-wrap: wrap;
 }
 
-@mixin border-box () {
+@mixin border-box {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-@mixin text-align-center () {
+@mixin text-align-center {
   text-align: center;
 }
