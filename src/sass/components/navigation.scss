@@ -1,17 +1,17 @@
-@import "mixins";
+@import "../common/mixins", "../common/constants";
 
 .nav {
   padding: 0 2rem;
-  background-color: #ffffff;
+  background-color: $backgroundColorWhite;
   border-bottom: 1px solid #000;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 2;
 
-  @include display-flex();
+  @include display-flex;
 
-  @include flex-align-center ();
+  @include flex-align-center;
 
   li {
     display: inline-block;
@@ -21,7 +21,7 @@
     a {
       margin: 0 1.2rem;
       margin-left: 0;
-      font-family: "Roboto", sans-serif;
+      font-family: $fontRoboto;
       font-size: 1.2rem;
 
       &:hover {
@@ -32,7 +32,7 @@
 }
 
 .nav__top-left {
-  width: 70%;
+  width: $fullWidthComponent * .7;
 
   @media (max-width:42em) {
     display: none;
@@ -41,11 +41,11 @@
   .submenu {
     display: none;
     position: absolute;
-    width: 100%;
+    width: $fullWidthComponent;
     height: 300px;
     top: 56px;
-    left: 0px;
-    background-color: #fff;
+    left: 0;
+    background-color: $backgroundColorWhite;
     padding: 1rem 1rem 2rem 2rem;
 
     &__col {
@@ -54,7 +54,7 @@
 
       &-title {
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: $fontBold;
         font-size: 1rem;
         line-height: 2rem;
         padding: 0;
@@ -73,16 +73,16 @@
   }
 
   .nav__list-item:hover .submenu {
-    display: flex;
+    @include display-flex;
   }
 }
 
 .nav__top-user {
   text-align: right;
-  width: 30%;
+  width: $fullWidthComponent * .3;
 
-  @media (max-width:42em) {
-    width: 80%;
+  @media (max-width: $breakpointTablet) {
+    width: $fullWidthComponent * .8;
   }
 
   .top-user__list-item a {
@@ -95,7 +95,7 @@
 .nav__mobile-button {
   font-size: 1.3rem;
   display: none;
-  width: 20%;
+  width: $fullWidthComponent * .2;
 
   @media (max-width:42em) {
     display: block;
