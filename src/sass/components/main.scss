@@ -12,11 +12,15 @@ main {
   @include border-box;
   
   @include display-flex;
+
+  @include flex-direction-column;
   
-  @media (max-width: $breakpointDesktop) {
-    @include flex-direction-column;
+  @include flex-align-center;
   
-    @include flex-align-center;
+  @media (min-width: $breakpointDesktop) {
+    @include flex-direction-row;
+  
+    @include flex-align-left;
   }
   
   &__container {
@@ -25,26 +29,20 @@ main {
     margin: auto;
     
     @include display-flex;
+
+    @include flex-direction-column;
   
-    @media (max-width: $breakpointDesktop) {
-      width: $fullWidthComponent;
-    
-      @include flex-direction-column;
+    @media (min-width: $breakpointDesktop) {
+      @include flex-direction-row;
     }
   }
 }
   
 .product-img {
-  width: $fullWidthComponent * .5;
+  width: $fullWidthComponent;
   
-  @media (max-width: $breakpointTablet) {
-    width: $fullWidthComponent;
-  }
-  
-  @media (max-width: $breakpointDesktop) {
-    width: $fullWidthComponent;
-  
-    @include flex-direction-column;
+  @media (min-width: $breakpointDesktop) {
+    width: $fullWidthComponent * .5;
   }
   
   &__wrap {
@@ -78,18 +76,20 @@ main {
 }
   
 .product-specs {
-  width: 485px;
-  padding: 0 5% 40px;
+  width: $fullWidthComponent;
+  padding: 40px 0 0;
   margin: auto;
   
-  @media (max-width: $breakpointDesktop) {
-    width: $fullWidthComponent;
-    padding: 40px 0 0;
+  @media (min-width: $breakpointDesktop) {
+    width: 485px;
+    padding: 0 5% 40px;
   }
 
   &:nth-child(1) {
-    @media (max-width: $breakpointDesktop) {
-      padding: 0 0 40px;
+    padding: 0 0 40px;
+
+    @media (min-width: $breakpointDesktop) {
+      padding: 40px 0 0;
     }
   }
   
@@ -125,8 +125,10 @@ main {
 
       @include display-flex;
 
-      @media (max-width: $breakpointTablet) {
-        @include flex-direction-column;
+      @include flex-direction-column;
+
+      @media (min-width: $breakpointTablet) {
+        @include flex-direction-row;
       }
   
       .selector {
@@ -168,7 +170,7 @@ main {
     }
 
     .add-to-bag__button {
-      background-color: $backgroungColorBlack;
+      background-color: $backgroungButton;
       border: 0;
       width: $fullWidthComponent;
       color: $fontColorWhite;

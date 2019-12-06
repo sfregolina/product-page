@@ -1,38 +1,36 @@
 @import "../common/mixins", "../common/constants";
 
 .footer {
-  padding: 2rem;
+  padding: 2rem 0;
   border-top: 1px solid #000;
 
-  @media (max-width: $breakpointTablet) {
-    padding: 2rem 0;
-  }
-
-  @media (max-width:63em) {
+  @media (min-width: $breakpointTablet) {
     padding: 2rem;
   }
 
   &__inner {
     @include display-flex;
 
-    @media (max-width:42em) {
-      @include flex-wrap;
+    @include flex-wrap;
 		
-      @include flex-direction-column;
+    @include flex-direction-column;
+
+    @media (min-width:$breakpointTablet) {
+      @include flex-direction-row;
     }
   }
 
   &__col {
     vertical-align: top;
-    margin: 0 5%;
+    text-align: center;
+    margin: 0 0 5%;
 
-    @media (max-width: $breakpointTablet) {
-      text-align: center;
-      margin: 0 0 5%;
+    @media (min-width: $breakpointTablet) {
+      text-align: left;
     }
 
-    @media (max-width:63em) {
-      margin: 0 0 5%;
+    @media (min-width: $breakpointDesktop) {
+      margin: 0 5%;
     }
   }
 
@@ -41,14 +39,10 @@
     padding-bottom: 10px;
 
     a {
-      margin: 0 1.2rem;
+      margin: 0;
       margin-left: 0;
       font-family: $fontRoboto;
       font-size: .9rem;
-
-      @media (max-width:42em) {
-        margin: 0;
-      }
 
       &:hover {
         font-style: italic;
@@ -58,56 +52,62 @@
 
   &__header:after {
     content: "";
-    width: 58px;
+    width: $fullWidthComponent;
     clear: left;
     display: block;
     border-top: 1px solid #000;
     margin: 7px 0;
   
-    @media (max-width: $breakpointTablet) {
-      width: $fullWidthComponent;
+    @media (min-width: $breakpointTablet) {
+      width: 58px;
     }
   }
 
   &__col-small {
-    width: 146px;
+    width: $fullWidthComponent;
 
-    @media (max-width: $breakpointTablet) {
-      width: $fullWidthComponent;
+    @media (min-width: $breakpointTablet) {
+      width: 146px;
     }
   }
 
   &__right-col {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+
     @include display-flex;
   
     @include flex-direction-column;
 
-    @media (max-width: $breakpointTablet) {
-      -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-      order: -1;
+    @include flex-align-center;
 
-      @include flex-align-center;
+    @media (min-width: $breakpointTablet) {
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: 0;
+      order: 0;
+
+      @include flex-align-left;
     }
 
     .signup-form {
-      width: 373px;
+      width: $fullWidthComponent;
       margin-bottom: 40px;
     
-      @media (max-width: $breakpointTablet) {
-        width: $fullWidthComponent;
+      @media (min-width: $breakpointTablet) {
+        width: 373px;
       }
 
       &__input[type=text] {
-        width: 270px;
+        width: 229px;
         min-width: 180px;
         padding: 15px;
         display: inline-block;
         border: 0;
         background: #f1f1f1;
     
-        @media (max-width: $breakpointTablet) {
-          width: 229px;
+        @media (min-width: $breakpointTablet) {
+          width: 270px;
         }
 
         &:focus {
@@ -116,10 +116,10 @@
       }
 
       &__btn {
-        width: 94px;
+        width: 79px;
         display: inline-block;
         padding: 12px;
-        background-color: $backgroungColorBlack;
+        background-color: $backgroungButton;
         border: 0;
         color: $fontColorWhite;
         text-decoration: none;
@@ -130,8 +130,8 @@
 
         @include text-align-center;
     
-        @media (max-width: $breakpointTablet) {
-          width: 79px;
+        @media (min-width: $breakpointTablet) {
+          width: 94px;
         }
 
         &:active {
@@ -141,10 +141,10 @@
     }
   
     .social {
-      width: 146px;
+      width: $fullWidthComponent;
 
-      @media (max-width: $breakpointTablet) {
-        width: $fullWidthComponent;
+      @media (min-width: $breakpointTablet) {
+        width: 146px;
       }
 
       &__list-item {
@@ -152,13 +152,14 @@
       }
     
       a {
-        font-size: 1.4rem;
-        margin-right: 25px;
+        font-size: 1.8rem;
+        padding: 0 15px;
+        margin: 0;
 
-        @media (max-width: $breakpointTablet) {
-          font-size: 1.8rem;
-          padding: 0 15px;
-          margin: 0;
+        @media (min-width: $breakpointTablet) {
+          font-size: 1.4rem;
+          margin-right: 25px;
+          padding: 0;
         }
       }
     }
