@@ -2,7 +2,7 @@
 
 .nav {
   padding: 0 2rem;
-  background-color: $backgroundColorWhite;
+  background-color: $backgroundGlobal;
   border-bottom: 1px solid #000;
   position: -webkit-sticky;
   position: sticky;
@@ -33,9 +33,10 @@
 
 .nav__top-left {
   width: $fullWidthComponent * .7;
+  display: none;
 
-  @media (max-width:42em) {
-    display: none;
+  @media (min-width: $breakpointTablet) {
+    display: block;
   }
 
   .submenu {
@@ -45,7 +46,7 @@
     height: 300px;
     top: 56px;
     left: 0;
-    background-color: $backgroundColorWhite;
+    background-color: $backgroundGlobal;
     padding: 1rem 1rem 2rem 2rem;
 
     &__col {
@@ -79,10 +80,10 @@
 
 .nav__top-user {
   text-align: right;
-  width: $fullWidthComponent * .3;
+  width: $fullWidthComponent * .8;
 
-  @media (max-width: $breakpointTablet) {
-    width: $fullWidthComponent * .8;
+  @media (min-width: $breakpointTablet) {
+    width: $fullWidthComponent * .3;
   }
 
   .top-user__list-item a {
@@ -94,10 +95,10 @@
 
 .nav__mobile-button {
   font-size: 1.3rem;
-  display: none;
+  display: block;
   width: $fullWidthComponent * .2;
 
-  @media (max-width:42em) {
-    display: block;
+  @media (min-width: $breakpointTablet) {
+    display: none;
   }
 }

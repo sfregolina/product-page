@@ -10,10 +10,22 @@
   align-items: center;
 }
 
+@mixin flex-align-left {
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+}
+
 @mixin flex-direction-column {
   -webkit-box-orient: vertical;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+@mixin flex-direction-row {
+  -webkit-box-orient: horizontal;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 @mixin flex-wrap {
