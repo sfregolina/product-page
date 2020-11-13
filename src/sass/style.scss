@@ -68,7 +68,8 @@ header {
   border-bottom: 1px solid #000;
 
   .header__logo {
-    @include text-align-center;
+    // @include text-align-center;
+    text-decoration: underline;
   }
 }
 
