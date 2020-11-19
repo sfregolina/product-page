@@ -1,0 +1,46 @@
+@import "../common/mixins","../common/constants";
+
+.burger-menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $backgroundGlobal;
+  z-index: 30;
+
+  &__head {
+    border-bottom: 1px solid #000;
+    display: flex;
+    padding: .8rem 2rem;
+    justify-content: space-between;
+
+    h1.header__logo {
+      font-size: 1.5rem;
+      padding: 0;
+    }
+
+    button {
+      border: 0;
+      background: $backgroundGlobal;
+
+      .fa-times:before {
+        font-size: 1.875rem;
+      }
+    }
+  }
+
+  &__list {
+    padding: 0 2rem;
+  }
+
+  &__list-item {
+    list-style: none;
+    padding: 2.1875rem 0;
+    border-bottom: 1px solid black;
+
+    a {
+      font-family: $fontRoboto;
+      font-size: 2.2rem;
+    }
+  }
+}
