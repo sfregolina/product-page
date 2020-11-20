@@ -6,7 +6,8 @@
   border-bottom: 1px solid #000;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 30;
+  justify-content: space-between;
 
   @include display-flex;
 
@@ -95,7 +96,8 @@
 .nav__mobile-button {
   font-size: 1.3rem;
   display: block;
-  width: $fullWidthComponent * .2;
+  border: 0;
+  background-color: $backgroundGlobal;
 
   @media (min-width: $breakpointTablet) {
     display: none;
