@@ -1,0 +1,68 @@
+@import "../common/mixins","../common/constants";
+
+.burger-menu {
+  position: fixed;
+  top: 0;
+  left: calc(-100vw);
+  width: calc(100vw);
+  background-color: $backgroundGlobal;
+  padding-bottom: 2.1875rem;
+  z-index: 40;
+  transition: all .6s;
+
+  @media (min-width: $breakpointTablet) {
+    display: none;
+  }
+
+  &__head {
+    border-bottom: 1px solid #000;
+    display: flex;
+    padding: .95rem 2rem;
+    justify-content: space-between;
+
+    h1.header__logo {
+      font-size: 1.5rem;
+      padding: 0;
+    }
+
+    button {
+      border: 0;
+      background: $backgroundGlobal;
+
+      .fa-times:before {
+        font-size: 1.875rem;
+      }
+    }
+  }
+
+  &__list {
+    padding: 0 2rem;
+  }
+
+  &__list-item {
+    list-style: none;
+    padding: 2.1875rem 0;
+    border-bottom: 1px solid black;
+
+    a {
+      font-family: $fontRoboto;
+      font-size: 2.2rem;
+
+      &:focus {
+        font-style: italic;
+      }
+    }
+  }
+
+  .account-menu li {
+    background-color: #e7e7e7;
+    padding-left: 2rem;
+  }
+}
+
+.active {
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  transition: all .6s;
+}

@@ -7,13 +7,33 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 	</head>
 	<body>
+		<aside class="burger-menu">
+			<header class="burger-menu__head">
+				<h1 class="header__logo">Modern Luxury<span>.</span></h1>
+				<button><i class="fas fa-times"></i></button>
+			</header>
+			<nav>
+				<ul class="burger-menu__list">
+					<li class="burger-menu__list-item"><a href="#">Just in</a></li>
+					<li class="burger-menu__list-item"><a href="#">Shop</a></li>
+					<li class="burger-menu__list-item"><a href="#">Designers</a></li>
+					<li class="burger-menu__list-item"><a href="#">Sale</a></li>
+				</ul>
+			</nav>
+			<nav>
+				<ul class="burger-menu__list account-menu">
+					<li class="burger-menu__list-item"><a href="#">Account</a></li>
+					<li class="burger-menu__list-item"><a href="#">Whishlist</a></li>
+				</ul>
+			</nav>
+		</aside>
 		<header class="header">
 			<h1 class="header__logo">Modern Luxury<span>.</span></h1>
 		</header>
 		<nav class="nav">
-			<div class="nav__mobile-button">
+			<button class="nav__mobile-button">
 				<i class="fas fa-bars"></i>
-			</div>
+			</button>
 			<div class="nav__top-left">
 				<ul class="nav__list">
 					<li class="nav__list-item"><a href="#">Just in</a>
@@ -233,5 +253,6 @@
 		</div>
 	</div>
 </footer>
+<script src="js/script.js"></script>
 </body>
 </html>
