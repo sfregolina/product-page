@@ -72,12 +72,6 @@
   }
 
   &__right-col {
-    -webkit-box-ordinal-group: 0;
-    -ms-flex-order: -1;
-    order: -1;
-
-    @include display-flex;
-  
     @include flex-direction-column;
 
     @include flex-align-center;
@@ -88,6 +82,22 @@
       order: 0;
 
       @include flex-align-left;
+    }
+
+    &:first-child {
+      @include display-flex;
+
+      @media (min-width: $breakpointTablet) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      display: none;
+
+      @media (min-width: $breakpointTablet) {
+        @include display-flex;
+      }
     }
 
     .signup-form {
