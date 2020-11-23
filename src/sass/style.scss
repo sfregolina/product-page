@@ -71,6 +71,11 @@ header {
 
   .header__logo {
     @include text-align-center;
+
+    &:after {
+      content: ".";
+      margin-left: 5px;
+    }
   }
 }
 
