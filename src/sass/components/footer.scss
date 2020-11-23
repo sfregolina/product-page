@@ -109,10 +109,6 @@
         @media (min-width: $breakpointTablet) {
           width: 270px;
         }
-
-        &:focus {
-          outline-style: none;
-        }
       }
 
       &__btn {
@@ -126,7 +122,6 @@
         font-size: .9rem;
         margin: 4px 2px;
         cursor: pointer;
-        outline: none;
 
         @include text-align-center;
     

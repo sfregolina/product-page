@@ -88,11 +88,6 @@ select {
   border-radius: 0;
   z-index: 20;
   -webkit-appearance: none;
-  outline: none;
   font-family: $fontRoboto;
   cursor: pointer;
-
-  &:focus {
-    outline: none;
-  }
 }
