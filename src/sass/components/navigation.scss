@@ -86,10 +86,13 @@
     width: $fullWidthComponent * .3;
   }
 
-  .top-user__list-item a {
+  .top-user__list-item button {
     margin: 0;
     margin-left: 30px;
     font-size: 1rem;
+    border: 0;
+    background-color: #FFF;
+    cursor: pointer;
   }
 }
 

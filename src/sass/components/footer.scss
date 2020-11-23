@@ -91,7 +91,8 @@
     }
 
     .signup-form {
-      width: $fullWidthComponent;
+      display: flex;
+      height: 48px;
       margin-bottom: 40px;
     
       @media (min-width: $breakpointTablet) {
@@ -101,8 +102,8 @@
       &__input[type=text] {
         width: 229px;
         min-width: 180px;
+        height: 100%;
         padding: 15px;
-        display: inline-block;
         border: 0;
         background: #f1f1f1;
     
@@ -113,14 +114,14 @@
 
       &__btn {
         width: 79px;
-        display: inline-block;
+        height: 100%;
         padding: 12px;
         background-color: $backgroundButton;
         border: 0;
         color: $fontColorWhite;
         text-decoration: none;
         font-size: .9rem;
-        margin: 4px 2px;
+        margin: 0;
         cursor: pointer;
 
         @include text-align-center;

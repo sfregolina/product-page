@@ -11,9 +11,9 @@
 }
 
 @mixin flex-align-left {
-  -webkit-box-align: left;
-  -ms-flex-align: left;
-  align-items: left;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
 }
 
 @mixin flex-direction-column {
